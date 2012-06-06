@@ -1,0 +1,15 @@
+{
+  "version": "0.0.5-2",
+  "private": true,
+  "dependencies": {
+    "ttapi": ">=1.4.2"
+  },
+  "subdomain": "tttulsabot",
+  "scripts": {
+    "start": "app.js"
+  },
+  "engines": {
+    "node": "0.6.x"
+  },
+  "name": "turntable_bot"
+}
