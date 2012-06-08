@@ -16,26 +16,31 @@ bot.on('speak', function (data) {
       console.log('said hi to '+name+'.');
    }
    // Bop
-   if (text.match(/^!karma++/)){
+   if (text.match(/bop/)){
       console.log('upvote from '+name+'.');
       bot.vote('up');
-      bot.speak('Bop!');
+      bot.speak('The great DJ accepts!');
    }
    // DeBop
-   if (text.match(/^!karma--/)){
+   if (text.match(/^!karma--$/)){
       console.log('downvote from '+name+'.');
       bot.vote('down');
-      bot.speak('Boo!');
+      bot.speak('Someone disapproves!');
    }
    // start DJing
    if (text.match(/^!dj$/)) {
+      console.log('djing');
       bot.addDj();
    }
    // stop DJing
    if (text.match(/^!listen$/)) {
+      console.log('not djing');
       bot.remDj();
    }
-
+   if (text.match(/^Woooo/)) {
+      bot.speak('I Summon the great DJ Wooooo!');
+      setTimeout(function() {bot.speak('Nope can\'t do it.');},3000);
+   }
 });
 bot.on('pmmed', function(data){
    var name = data.name;
